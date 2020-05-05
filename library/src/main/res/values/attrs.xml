@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 圆角图片： radius：全局圆角
+     bottomLeftRadius：左下角圆角弧度   bottomRightRadius：右下角圆角弧度
+     topRightRadius：右上角圆角弧度     topLeftRadius：左上角圆角弧度 -->
+    <declare-styleable name="CornersImageView">
+        <attr name="radius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="topLeftRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>
