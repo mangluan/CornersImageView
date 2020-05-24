@@ -26,7 +26,7 @@ public class CornersImageView extends android.support.v7.widget.AppCompatImageVi
      * @param radius  圆角弧度
      */
     public CornersImageView(Context context, float radius) {
-        this(context);
+        this(context, null);
         this.radius = new float[]{radius, radius, radius, radius, radius, radius, radius, radius};
     }
 
@@ -40,13 +40,13 @@ public class CornersImageView extends android.support.v7.widget.AppCompatImageVi
      * @param topLeftRadius     左上角弧度
      */
     public CornersImageView(Context context, float bottomLeftRadius, float bottomRightRadius, float topRightRadius, float topLeftRadius) {
-        this(context);
+        this(context, null);
         this.radius = new float[]{topLeftRadius, topLeftRadius, topRightRadius
                 , topRightRadius, bottomRightRadius, bottomRightRadius, bottomLeftRadius, bottomLeftRadius};
     }
 
     public CornersImageView(Context context) {
-        this(context, null);
+        this(context, 0);
     }
 
     public CornersImageView(Context context, AttributeSet attrs) {
@@ -102,8 +102,6 @@ public class CornersImageView extends android.support.v7.widget.AppCompatImageVi
         mRectF = new RectF(0, 0, w, h);
     }
 
-<<<<<<< HEAD
-
     /**
      * 单独设置 全局圆角弧度
      *
@@ -153,7 +151,5 @@ public class CornersImageView extends android.support.v7.widget.AppCompatImageVi
         this.radius[1] = topLeftRadius;
     }
 
-=======
->>>>>>> parent of 16357ff... CornersImageView 1.0
 }
 
