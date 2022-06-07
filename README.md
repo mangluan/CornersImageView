@@ -24,7 +24,7 @@ allprojects {
 **Step 2. 添加项目依赖**
 ``` gradle
 dependencies {
-    implementation 'com.mangluan:CornersImageView:1.0.0'
+    implementation 'com.mangluan:CornersImageView:1.1.0'
 }
 ```
 **Step 3. 在布局文件中添加CornersImageView**
@@ -58,6 +58,10 @@ public CornersImageView(Context context, float bottomLeftRadius,
 
 ### 更新说明
 ###### 
+**v1.1.0**
+   * 项目升级为 Android X
+   * 性能优化
+
 **v1.0.1**
    * 修复构造方法bug
 

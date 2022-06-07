@@ -10,13 +10,15 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 /**
  * 自定义控件
  * 后期会加入蒙层、边框
  * <p>
  * 圆角ImageView
  */
-public class CornersImageView extends android.support.v7.widget.AppCompatImageView {
+public class CornersImageView extends AppCompatImageView {
 
 
     /**
@@ -87,19 +89,17 @@ public class CornersImageView extends android.support.v7.widget.AppCompatImageVi
 
     @Override
     protected void onDraw(Canvas canvas) {
-        mPath.reset();
-        mPath.addRoundRect(mRectF, radius, Path.Direction.CW);
         canvas.setDrawFilter(paintFlagsDrawFilter);
-        canvas.save();
         canvas.clipPath(mPath);
         super.onDraw(canvas);
-        canvas.restore();
     }
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         mRectF = new RectF(0, 0, w, h);
+        mPath.reset();
+        mPath.addRoundRect(mRectF, radius, Path.Direction.CW);
     }
 
     /**
